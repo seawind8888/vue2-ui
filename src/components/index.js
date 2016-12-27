@@ -21,7 +21,7 @@ import Popup from './popup'
 import Radio from './radio'
 import RadioOptionCircle from './radio-option-circle'
 import Selector from './selector'
-import Switch from './switch'
+import Switcher from './switch'
 import Tab from './tab'
 import Tag from './tag'
 import Toast from './toast'
@@ -49,7 +49,7 @@ const mui = {
   Radio,
   RadioOptionCircle,
   Selector,
-  Switch,
+  Switcher,
   Tab,
   Tag,
   Toast

@@ -8,10 +8,10 @@
       <slot></slot>
     </div>
     <div class="mui-group-item-ft">
-      <input class="mui-switch" type="checkbox" :disabled="disabled" v-model="value"/>
+      <input class="mui-switch" type="checkbox" :disabled="disabled" v-model="inputValue"/>
     </div>
   </div>
-  <input v-else class="mui-switch" type="checkbox" :disabled="disabled" v-model="value"/>
+  <input v-else class="mui-switch" type="checkbox" :disabled="disabled" v-model="inputValue"/>
 </template>
 
 <script>
@@ -47,6 +47,11 @@ export default {
   computed: {
     defaultLabelWidth: function () {
       return this.title.replace(/[^x00-xff]/g, '00').length / 2 + 1
+    }
+  },
+  data () {
+    return {
+      inputValue: false
     }
   }
 }
