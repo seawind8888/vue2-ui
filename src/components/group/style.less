@@ -1,0 +1,37 @@
+@import "../_supports/less/variables.less";
+
+@import "../_supports/less/arrow.less";
+@import "../_supports/less/set-one-px-line.less";
+@import "../_supports/less/tap-color.less";
+
+//
+// Base styles
+// ----------------------
+.mui-group {
+    margin-top: @muiGroupMarginTop;
+    background-color: @muiCellBg;
+    line-height: @muiCellLineHeight;
+    font-size: @muiCellFontSize; //group-item中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个group-item的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在group-item上用oh不生效
+
+    // onepx
+    position: relative;
+    &:before {
+        .setTopLine(@muiCellBorderColor);
+    }
+    &:after {
+        .setBottomLine(@muiCellBorderColor);
+    }
+    > a {
+      color:#000;
+    }
+}
+
+.mui-group-tips {
+    margin-top: .3em; // 8px - 行高
+    color: @globalTextColor;
+    padding-left: @muiCellGapH;
+    padding-right: @muiCellGapH;
+    font-size: @muiCellTipsFontSize;
+}

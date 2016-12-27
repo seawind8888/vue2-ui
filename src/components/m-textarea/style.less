@@ -1,0 +1,29 @@
+//
+// Variables
+// -------------------
+@import "../_supports/less/variables.less";
+
+//
+// Style
+// -------------------
+.mui-textarea {
+    display: block;
+    border: 0;
+    resize: none;
+    width: 100%;
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    outline: 0;
+    &::placeholder {
+      color: @muiPlaceholderColor;
+    }
+}
+
+.mui-textarea-counter{
+    color: @globalDescColor;
+    text-align: right;
+    .mui-cell-warn &{
+        color: @globalWarnColor;
+    }
+}
